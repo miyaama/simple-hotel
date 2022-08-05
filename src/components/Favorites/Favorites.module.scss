@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 16px;
+  background-color: white;
+  padding: 32px;
+  box-sizing: border-box;
+  width: 360px;
+  height: 472px;
+
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+.selectedArrow {
+  path {
+    fill: #41522e;
+  }
+}
+
+.arrowContainer {
+  display: flex;
+  flex-direction: column;
+}

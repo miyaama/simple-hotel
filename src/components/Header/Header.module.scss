@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 35px 32px 32px;
+  background: #e5e5e5;
+
+  h2 {
+    color: rgba(66, 66, 66, 1);
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  h4 {
+    margin: 0 15px 0 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.logoutContainer {
+  display: flex;
+  align-items: center;
+}
+
+.imgLink {
+  display: flex;
+  align-items: center;
+}

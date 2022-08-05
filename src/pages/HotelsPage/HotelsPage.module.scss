@@ -1,0 +1,11 @@
+.container {
+  width: 1048px;
+  margin: auto;
+  display: flex;
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 24px;
+}

@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-radius: 16px;
+  background-color: white;
+  padding: 48px 32px 52px 32px;
+  box-sizing: border-box;
+  width: 360px;
+  height: 472px;
+
+  h2 {
+    font-weight: 500;
+    font-size: 32px;
+    margin: 0 20px 0 0;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #41522e;
+  }
+}
+
+.containerTitle {
+  display: flex;
+}
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.images {
+  margin-bottom: 28px;
+}
