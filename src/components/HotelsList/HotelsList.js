@@ -60,7 +60,7 @@ function HotelsList() {
           <p className={styles.amountFavHotels}>{favoriteHotelsLength}</p>
           <p className={styles.favTitle}>отелей</p>
         </div>
-        <div className={styles.hotelsContainer}>
+        <div className={hotels.length ? styles.hotelsContainer : ""}>
           {hotels.length ? (
             hotels.map((hotel) => (
               <div key={hotel.hotelId}>
