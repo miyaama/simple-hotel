@@ -1,26 +1,81 @@
+.container {
+  margin: 16px 0;
+  flex-grow: 1;
+}
+
 .hotelName {
   font-weight: 300;
   font-size: 17px;
+  margin: 0;
 }
 
 .hotelDate {
   color: #878787;
   font-weight: 400;
   font-size: 14px;
+  margin: 0;
+  margin-right: 20px;
 }
 
 .hotelPriceTitle {
   color: #878787;
   font-weight: 300;
   font-size: 11px;
-  margin-right: 16px;
+  margin: 0 16px 0 0;
 }
 
 .hotelPriceValue {
   font-weight: 400;
   font-size: 17px;
+  margin: 0;
 }
 
 .hotelPrice {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 6px;
+}
 
+.bottomContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+  align-items: flex-end;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.hotelDateSymbol {
+  color: #c4c4c4;
+  margin: 0;
+  margin-right: 10px;
+  font-weight: 100;
+}
+
+.hotelDateContainer {
+  display: flex;
+}
+
+.heartIcon {
+  &:hover {
+    path {
+      fill: #c4c4c4;
+    }
+  }
+}
+
+.containerHotelCard {
+  display: flex;
+  align-items: center;
+}
+
+.hotelIcon {
+  margin-right: 24px;
 }

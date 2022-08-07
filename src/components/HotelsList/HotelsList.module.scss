@@ -7,7 +7,6 @@
   padding: 48px 32px 52px 32px;
   box-sizing: border-box;
   width: 360px;
-  height: 472px;
 
   h2 {
     font-weight: 500;
@@ -19,12 +18,23 @@
     font-weight: 400;
     font-size: 24px;
     color: #41522e;
+    margin: 0;
   }
+}
+
+.city {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 255px;
 }
 
 .containerTitle {
   display: flex;
+  align-items: center;
+  max-width: 100%;
 }
+
 .containerHeader {
   display: flex;
   justify-content: space-between;
@@ -34,4 +44,48 @@
 
 .images {
   margin-bottom: 28px;
+}
+
+.favorite {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(66, 66, 66, 1);
+  display: flex;
+  margin-bottom: 20px;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.tabIcon {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.amountFavHotels {
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.favTitle {
+  margin-right: 8px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e7e7e7;
+  margin: 0;
+}
+
+.hotelCard {
+  padding-right: 16px;
+}
+
+.empty {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(66, 66, 66, 1);
 }

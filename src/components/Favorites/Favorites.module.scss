@@ -7,7 +7,6 @@
   padding: 32px;
   box-sizing: border-box;
   width: 360px;
-  height: 472px;
 
   h2 {
     font-weight: 500;
@@ -25,4 +24,41 @@
 .arrowContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 8px;
+  border: 1px solid rgba(229, 229, 229, 1);
+  border-radius: 4px;
+  padding: 4px 12.5px 4px 8px;
+
+  p {
+    margin: 0 9px 0 0;
+    color: rgba(153, 160, 163, 1);
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.activeFilter {
+  border-color: #41522e;
+}
+
+.filterContainer {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.emptyList {
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.active {
+  color: #41522e !important;
 }

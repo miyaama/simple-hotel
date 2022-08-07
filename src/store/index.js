@@ -1,13 +1,14 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import loginReduser from "./redusers/loginReduser";
-import hotelsReduser from "./redusers/hotelsReduser";
 import createSagaMiddleware from "redux-saga";
-import hotelsSaga from "./sagas/hotelsSaga";
+
+import { loginReducer, hotelsReducer } from "./reducers";
+import rootSaga from "./sagas";
+
 const sagaMiddleware = createSagaMiddleware();
 
 const rootReducer = combineReducers({
-  login: loginReduser,
-  hotels: hotelsReduser,
+  login: loginReducer,
+  hotels: hotelsReducer,
 });
 
 export const store = configureStore({
@@ -15,4 +16,4 @@ export const store = configureStore({
   middleware: [sagaMiddleware],
 });
 
-sagaMiddleware.run(hotelsSaga);
+sagaMiddleware.run(rootSaga);

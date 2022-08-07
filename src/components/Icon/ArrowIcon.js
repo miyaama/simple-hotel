@@ -1,10 +1,10 @@
-export const ArrowIcon = (props) => {
+export const ArrowIcon = ({ isActive, ...props }) => {
   return (
     <svg
-      width="9"
+      width="8.7"
       height="7"
-      viewBox="0 0 9 7"
-      fill="none"
+      viewBox="0 0 8.7 7"
+      fill={isActive ? "#41522E" : "#A7A7A7"}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >

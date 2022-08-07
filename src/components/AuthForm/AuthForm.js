@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./AuthForm.module.scss";
 import Input from "../Input";
 import Button from "../Button/Button";
 import { useDispatch } from "react-redux";
-import { loginTrue } from "../../store/redusers/loginReduser";
+import { loginTrue } from "../../store/reducers/loginReducer";
 
 function AuthForm() {
   const [state, setState] = useState({
@@ -13,7 +12,6 @@ function AuthForm() {
     errors: { email: "", password: "" },
   });
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleFormInput = (e) => {
@@ -40,7 +38,7 @@ function AuthForm() {
         state.email.trim()
       )
     ) {
-      errors.email = "Введите корректный email";
+      errors.email = "Неверный email";
       isOk = false;
     }
 
@@ -49,9 +47,8 @@ function AuthForm() {
       isOk = false;
     }
 
-    if (!/^[a-zA-Z]\w{8,}$/.test(state.password.trim())) {
-      errors.password =
-        "Пароль должен состоять из минимум 8 символов латинского алфавита";
+    if (!/^[a-zA-Z]\w{7,}$/.test(state.password.trim())) {
+      errors.password = "Неверный пароль";
       isOk = false;
     }
 
@@ -64,7 +61,6 @@ function AuthForm() {
 
     if (isOk) {
       dispatch(loginTrue());
-      navigate("/hotels");
     }
   };
 

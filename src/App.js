@@ -1,22 +1,20 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getDefaultHotels } from "./store/redusers/hotelsReduser";
+import { useDispatch } from "react-redux";
+
 import AuthorizationPage from "./pages/AuthorizationPage/AuthorizationPage";
 import HotelsPage from "./pages/HotelsPage/HotelsPage";
-
+import { getAuthFromLocalStorage } from "./localStorage";
 import styles from "./App.module.scss";
+import { loginTrue } from "./store/reducers";
 
 function App() {
   const dispatch = useDispatch();
-  const hotels = useSelector((state) => state.hotels.hotels);
+  const isAuth = getAuthFromLocalStorage();
 
-  useEffect(() => {
-    dispatch(getDefaultHotels());
-  }, [dispatch]);
-
-  console.log(hotels);
+  if (isAuth) {
+    dispatch(loginTrue());
+  }
 
   return (
     <div className={styles.App}>
