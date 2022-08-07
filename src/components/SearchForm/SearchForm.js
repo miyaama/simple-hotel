@@ -34,6 +34,8 @@ function SearchForm() {
 
   useEffect(() => {
     fetchHotels();
+    // first fetch only for initialization
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
