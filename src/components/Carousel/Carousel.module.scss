@@ -3,12 +3,13 @@
   overflow-y: scroll;
   margin-bottom: 11px;
   padding: 0;
+  // height: 46%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
   &::-webkit-scrollbar {
     width: 0px;
-    background: transparent; /* Chrome/Safari/Webkit */
+    background: transparent;
   }
 
   img {

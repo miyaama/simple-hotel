@@ -43,40 +43,44 @@ function HotelsList() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.containerHeader}>
-        <div className={styles.containerTitle}>
-          <h2 className={styles.hotelsTitle}>Отели</h2>
-          <div className={styles.tabIcon}>
-            <TabIcon />
-          </div>
-          <h2 className={styles.city}>{city}</h2>
-        </div>
-        <h3>{arrivalDate}</h3>
-      </div>
-      <Carousel />
-      <div className={styles.favorite}>
-        <p className={styles.favTitle}>Добавлено в Избранное:</p>
-        <p className={styles.amountFavHotels}>{favoriteHotelsLength}</p>
-        <p className={styles.favTitle}>отелей</p>
-      </div>
-      {hotels.length ? (
-        hotels.map((hotel) => (
-          <div key={hotel.hotelId}>
-            <div className={styles.hotelCard}>
-              <HotelCard
-                key={hotel.hotelId}
-                hotel={hotel}
-                arrivalDate={arrivalDate}
-                amountOfDays={amountOfDays}
-                hotelCardStyle="hotelCardStyle"
-              />
+      <>
+        <div className={styles.containerHeader}>
+          <div className={styles.containerTitle}>
+            <h2 className={styles.hotelsTitle}>Отели</h2>
+            <div className={styles.tabIcon}>
+              <TabIcon />
             </div>
-            <hr></hr>
+            <h2 className={styles.city}>{city}</h2>
           </div>
-        ))
-      ) : (
-        <p className={styles.empty}>Ничего не найдено</p>
-      )}
+          <h3>{arrivalDate}</h3>
+        </div>
+        <Carousel />
+        <div className={styles.favorite}>
+          <p className={styles.favTitle}>Добавлено в Избранное:</p>
+          <p className={styles.amountFavHotels}>{favoriteHotelsLength}</p>
+          <p className={styles.favTitle}>отелей</p>
+        </div>
+        <div className={styles.hotelsContainer}>
+          {hotels.length ? (
+            hotels.map((hotel) => (
+              <div key={hotel.hotelId}>
+                <div className={styles.hotelCard}>
+                  <HotelCard
+                    key={hotel.hotelId}
+                    hotel={hotel}
+                    arrivalDate={arrivalDate}
+                    amountOfDays={amountOfDays}
+                    hotelCardStyle="hotelCardStyle"
+                  />
+                </div>
+                <hr></hr>
+              </div>
+            ))
+          ) : (
+            <p className={styles.empty}>Ничего не найдено</p>
+          )}{" "}
+        </div>
+      </>
     </div>
   );
 }

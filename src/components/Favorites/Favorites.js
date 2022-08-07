@@ -77,6 +77,7 @@ function Favorites() {
               </div>
             </div>
           </div>
+          <div className={styles.hotelsContainer}>
           {favoriteHotelsIds.map((id) => {
             const hotel = favoriteHotels[id];
 
@@ -92,6 +93,7 @@ function Favorites() {
               </>
             );
           })}
+          </div>
         </>
       ) : (
         <p className={styles.emptyList}>Список пуст</p>

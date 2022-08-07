@@ -1,12 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
-
   border-radius: 16px;
   background-color: white;
   padding: 32px;
   box-sizing: border-box;
   width: 360px;
+  max-height: 472px;
 
   h2 {
     font-weight: 500;
@@ -61,4 +61,17 @@
 
 .active {
   color: #41522e !important;
+}
+
+.hotelsContainer {
+  max-height: 600px;
+  overflow-y: scroll;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hotelsContainer::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }

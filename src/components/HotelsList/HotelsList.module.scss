@@ -7,6 +7,8 @@
   padding: 48px 32px 52px 32px;
   box-sizing: border-box;
   width: 360px;
+  max-height: 902px;
+  margin-bottom: 30px;
 
   h2 {
     font-weight: 500;
@@ -88,4 +90,20 @@ hr {
   font-size: 17px;
   font-weight: 300;
   color: rgba(66, 66, 66, 1);
+}
+
+.hotelsContainer {
+  max-height: 600px;
+  overflow-y: scroll;
+  padding-right: 14px;
+  max-height: 517px;
+}
+
+.hotelsContainer::-webkit-scrollbar {
+  width: 2px;
+  background-color: #e7e7e7;
+}
+
+.hotelsContainer::-webkit-scrollbar-thumb {
+  background-color: #41522e;
 }
