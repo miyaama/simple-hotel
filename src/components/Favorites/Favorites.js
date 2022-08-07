@@ -94,7 +94,7 @@ function Favorites() {
           })}
         </>
       ) : (
-        <p className={styles.emptyList}>Список Избранноого пуст</p>
+        <p className={styles.emptyList}>Список пуст</p>
       )}
     </div>
   );
