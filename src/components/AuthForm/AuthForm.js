@@ -33,24 +33,24 @@ function AuthForm() {
 
     let isOk = true;
 
-    if (
-      !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(
-        state.email.trim()
-      )
-    ) {
-      errors.email = "Неверный email";
-      isOk = false;
-    }
+    // if (
+    //   !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(
+    //     state.email.trim()
+    //   )
+    // ) {
+    //   errors.email = "Неверный email";
+    //   isOk = false;
+    // }
 
     if (state.email.trim().length === 0) {
       errors.email = "Поле пустое";
       isOk = false;
     }
 
-    if (!/^[a-zA-Z]\w{7,}$/.test(state.password.trim())) {
-      errors.password = "Неверный пароль";
-      isOk = false;
-    }
+    // if (!/^[a-zA-Z]\w{7,}$/.test(state.password.trim())) {
+    //   errors.password = "Неверный пароль";
+    //   isOk = false;
+    // }
 
     if (state.password.trim().length === 0) {
       errors.password = "Поле пустое";
