@@ -1,3 +1,3 @@
-Hotel finder app with API in React.
+Hotel finder app
 
-Deploy: https://regal-scone-3d22e6.netlify.app/
+life: https://regal-scone-3d22e6.netlify.app/
